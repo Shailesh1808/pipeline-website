@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-12 text-sm text-center md:text-left">
           
           <div>
-            <h3 className="font-semibold mb-2">Platform</h3>
+            <h3 className="text-[#A4BBDD] font-semibold mb-2">Platform</h3>
             <ul className="space-y-1">
               <li><a href="#features" className="hover:text-[#FFFDD0]">Features</a></li>
               <li><a href="#industries" className="hover:text-[#FFFDD0]">Industries</a></li>
@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-2">Company</h3>
+            <h3 className="text-[#A4BBDD] font-semibold mb-2">Company</h3>
             <ul className="space-y-1">
               <li><a href="#about" className="hover:text-[#FFFDD0]">About</a></li>
               <li><a href="#team" className="hover:text-[#FFFDD0]">Team</a></li>
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-2">Contact</h3>
+            <h3 className="text-[#A4BBDD] font-semibold mb-2">Contact</h3>
             <ul className="space-y-1">
               <li><a href="mailto:contact@ganess.tech" className="hover:text-[#FFFDD0]">Email</a></li>
               <li><a href="https://twitter.com/PipelineAI25" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFFDD0]">X</a></li>

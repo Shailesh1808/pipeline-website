@@ -8,7 +8,7 @@ export default function TeamMember({ image, name, role, bio, linkedin }) {
 
   return (
     <motion.div
-      className="w-96 h-[560px] relative"
+      className="w-80 h-[450px] relative"
       style={{ perspective: 1000 }}
       whileHover={{ scale: 1.05 }}
     >

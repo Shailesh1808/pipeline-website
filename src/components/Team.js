@@ -32,7 +32,7 @@ const teamMembers = [
   {
     name: "Haran Ravindran",
     role: "AI/ML Lead",
-    image: "/images/haran.jpg",
+    image: "/images/Haran.jpg",
     linkedin: "https://linkedin.com/in/haran",
     bio: "Senior ML Engineer at Kunato with expertise in building production-grade AI systems for cybersecurity analytics. Previous experience at Kloudle, NetEnrich, ICICI Bank, and Continental, focusing on anomaly detection, reinforcement learning, and NLP for real-time applications."
   },
