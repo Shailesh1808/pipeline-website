@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#0a0a3a] to-[#050522] text-white border-t border-gray-700 px-4 sm:px-6 md:px-20 pt-10 pb-6">
+    <footer className="w-full bg-gradient-to-b from-[#0a0a3a] to-[#050522] text-white border-t border-gray-700 px-6 md:px-20 pt-12 pb-6">
       <div className="flex flex-col md:flex-row md:justify-between md:items-start max-w-6xl mx-auto w-full">
         
         {/* Logo / Name */}
