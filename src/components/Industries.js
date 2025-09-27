@@ -46,7 +46,7 @@ export default function Industries() {
   return (
     <section
       id="industries"
-      className="pt-16 pb-12 px-6 relative scroll-mt-24 bg-robot-arm"
+      className="item-center text-center pt-16 pb-12 px-6 relative scroll-mt-24 bg-robot-arm"
     >
       {/* Section Heading */}
       <div className="max-w-3xl mx-auto text-center mb-16">

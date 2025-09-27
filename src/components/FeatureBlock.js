@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function FeatureBlock({ title, description, image, reverse }) {
   return (
     <motion.div
-      className={`flex flex-col md:flex-row items-center justify-between my-12 sm:my-16 md:my-20 ${
+      className={`flex flex-col md:flex-row items-center text-center justify-between my-12 sm:my-16 md:my-20 ${
         reverse ? "md:flex-row-reverse" : ""
       }`}
       initial={{ opacity: 0, x: reverse ? 100 : -100 }}

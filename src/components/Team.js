@@ -71,7 +71,7 @@ export default function Team() {
   return (
     <section
       id="team"
-      className="text-white pt-16 md:pt-20 pb-12 px-4 sm:px-6 md:px-20 scroll-mt-24 bg-robot-arm bg-lock-left"
+      className="item-center text-center text-white pt-16 md:pt-20 pb-12 px-4 sm:px-6 md:px-20 scroll-mt-24 bg-robot-arm bg-lock-left"
     >
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 text-[#FFFDD0]">
         Meet the Team

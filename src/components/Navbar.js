@@ -22,7 +22,7 @@ export default function Navbar() {
           : "bg-[#000026]"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-20 px-4 sm:px-8">
+      <div className="w-full max-w-7xl mx-auto flex items-center justify-between h-20 px-4 sm:px-8">
         {/* Logo (click to go home) */}
         <Link href="/" replace>
           <span className="text-white font-bold text-[22px] sm:text-[25px] tracking-[-0.01em] font-inter cursor-pointer">
@@ -60,14 +60,14 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex">
+        <div className="md:hidden flex justify-end flex-1">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-[#FFFDD0] focus:outline-none ml-auto"
+            className="text-[#FFFDD0] focus:outline-none"
             aria-label="Toggle menu"
           >
             <svg
-              className="h-6 w-6"
+              className="h-7 w-7"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#000026] px-4 pb-6 space-y-4">
+        <div className="md:hidden bg-[#000026] px-6 pb-6 space-y-4 text-center">
           <Link href="#about" scroll={true}>
             <span className="block text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
               About
