@@ -14,9 +14,14 @@ import {
 export default function About() {
   return (
     <section
-      id="about"
-      className="item-center text-center py-12 md:py-24 px-6 scroll-mt-24 bg-robot-arm bg-lock-left"
-    >
+  id="about"
+  className="w-full max-w-7xl mx-auto 
+             flex flex-col items-center text-center 
+             px-4 sm:px-6 lg:px-8 
+             py-10 sm:py-16 md:py-24 
+             scroll-mt-24 bg-robot-arm bg-lock-left"
+>
+
       {/* Section Heading */}
       <div className="max-w-3xl mx-auto text-center mb-12 md:mb-20">
         <h2 className="text-2xl md:text-4xl font-bold text-[#A4BBDD] leading-snug">

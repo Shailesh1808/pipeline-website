@@ -18,9 +18,13 @@ export default function Hero() {
 
   return (
     <section
-      id="hero"
-      className="min-h-screen flex flex-col items-center text-center px-4 pt-6 pb-12 md:pb-24 scroll-mt-24 bg-robot-arm"
-    >
+  id="hero"
+  className="min-h-screen flex flex-col items-center text-center 
+             w-full max-w-7xl mx-auto 
+             px-4 sm:px-6 lg:px-8 
+             pt-10 pb-12 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 
+             scroll-mt-24 bg-robot-arm"
+>
       {/* Line 1 */}
       <h1 className="text-white font-bold text-[40px] md:text-[56px] tracking-[-0.04em] leading-[1.1em] font-inter mb-4">
         <Typewriter
