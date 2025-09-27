@@ -1,56 +1,71 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Track scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20); // trigger after 20px scroll
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="w-full bg-[#000026] sticky top-0 z-50">
-      <div className="max-w-4xl mx-auto flex items-center justify-between h-20 px-4">
+    <nav
+      className={`w-full sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#000026]/95 shadow-md border-b border-[#1a1a40]"
+          : "bg-[#000026]"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-20 px-4 sm:px-8">
         {/* Logo (click to go home) */}
         <Link href="/" replace>
-          <span className="text-white font-bold text-[25px] tracking-[-0.01em] font-inter cursor-pointer">
+          <span className="text-white font-bold text-[22px] sm:text-[25px] tracking-[-0.01em] font-inter cursor-pointer">
             Pipeline®
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-12">
+        <div className="hidden md:flex space-x-8 lg:space-x-12">
           <Link href="#about" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
               About
             </span>
           </Link>
           <Link href="#industries" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
               Industries
             </span>
           </Link>
           <Link href="#insights" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
               Insights
             </span>
           </Link>
           <Link href="#team" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
               Team
             </span>
           </Link>
           <Link href="#contact" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
               Contact Us
             </span>
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-[#FFFDD0] focus:outline-none"
+            className="text-[#FFFDD0] focus:outline-none ml-auto"
             aria-label="Toggle menu"
           >
-            {/* Hamburger Icon */}
             <svg
               className="h-6 w-6"
               fill="none"

@@ -10,12 +10,12 @@ const industries = [
   },
   {
     title: "Aerospace",
-    description: "Adhering to DO-178C, militarygrade security standards",
+    description: "Adhering to DO-178C, military-grade security standards",
     image: "/images/aerospace.png",
   },
   {
     title: "Automotive",
-    description: "Regulated by ISO 26262, UNECE for WP.29 for cybersecurity",
+    description: "Regulated by ISO 26262, UNECE WP.29 for cybersecurity",
     image: "/images/automotive.png",
   },
   {
@@ -28,14 +28,16 @@ const industries = [
 export default function Industries() {
   const controls = useAnimation();
 
-  // Start animation on mount
   useEffect(() => {
+    // Adjust scroll speed by screen width
+    const speed = window.innerWidth < 768 ? 12 : 25; // faster on mobile
+
     controls.start({
       x: ["0%", "-100%"],
       transition: {
         repeat: Infinity,
         repeatType: "loop",
-        duration: 25,
+        duration: speed,
         ease: "linear",
       },
     });
@@ -61,22 +63,22 @@ export default function Industries() {
 
       {/* Carousel */}
       <div className="overflow-hidden relative">
-        {/* Gradient overlays for fading edges */}
+        {/* Gradient overlays */}
         <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#000026] to-transparent z-10" />
         <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#000026] to-transparent z-10" />
 
         <motion.div
-          className="flex gap-12"
+          className="flex gap-12 items-center justify-center"
           animate={controls}
           initial={{ x: "0%" }}
         >
           {[...industries, ...industries].map((industry, idx) => (
             <div
               key={idx}
-              className="min-w-[320px] flex-shrink-0 text-center"
+              className="min-w-[320px] flex-shrink-0 text-center flex flex-col items-center"
             >
-              {/* Fixed-size container for images */}
-              <div className="w-[400px] h-[220px] mx-auto relative">
+              {/* Fixed-size image container */}
+              <div className="w-[350px] h-[200px] relative">
                 <Image
                   src={industry.image}
                   alt={industry.title}
@@ -84,10 +86,10 @@ export default function Industries() {
                   className="rounded-lg shadow-md object-cover"
                 />
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-white uppercase whitespace-normal max-w-[400px] mx-auto">
+              <h3 className="mt-4 text-lg font-semibold text-white uppercase max-w-[350px]">
                 {industry.title}
               </h3>
-              <p className="text-base font-medium leading-snug text-[#FFFDD0] mt-2 whitespace-normal max-w-[400px] mx-auto">
+              <p className="text-base font-medium leading-snug text-[#FFFDD0] mt-2 max-w-[350px]">
                 {industry.description}
               </p>
             </div>

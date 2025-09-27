@@ -19,10 +19,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center text-center px-4 pt-3 scroll-mt-24 bg-robot-arm"
+      className="min-h-screen flex flex-col items-center text-center px-4 pt-6 pb-12 md:pb-24 scroll-mt-24 bg-robot-arm"
     >
       {/* Line 1 */}
-      <h1 className="text-white font-bold text-[40px] tracking-[-0.04em] leading-[1em] font-inter mb-4">
+      <h1 className="text-white font-bold text-[40px] md:text-[56px] tracking-[-0.04em] leading-[1.1em] font-inter mb-4">
         <Typewriter
           words={["AI-Powered Security & Compliance"]}
           loop={1}
@@ -39,7 +39,7 @@ export default function Hero() {
         }`}
       >
         {showLine2 && (
-          <h2 className="text-[#A4BBDD] font-bold text-[40px] tracking-[-0.04em] leading-[1em] font-inter">
+          <h2 className="text-[#A4BBDD] font-bold text-[32px] md:text-[48px] tracking-[-0.04em] leading-[1.1em] font-inter">
             <Typewriter
               words={["Purpose-Built for Embedded Devices"]}
               loop={1}
@@ -53,7 +53,7 @@ export default function Hero() {
 
       {/* Demo Video with fade-in */}
       <div
-        className={`mt-12 w-full max-w-5xl transition-opacity duration-1000 ${
+        className={`mt-10 md:mt-12 w-full max-w-5xl transition-opacity duration-1000 ${
           showVideo ? "opacity-100" : "opacity-0"
         }`}
       >

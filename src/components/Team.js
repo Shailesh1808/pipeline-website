@@ -69,23 +69,24 @@ export default function Team() {
   const grouped = chunkMembers(teamMembers);
 
   return (
-  <section 
-    id = "team"
-    className="text-white pt-20 pb-8 px-6 md:px-20 scroll-mt-24 bg-robot-arm bg-lock-left">
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#FFFDD0]">
-      Meet the Team
-    </h2>
+    <section
+      id="team"
+      className="text-white pt-16 md:pt-20 pb-12 px-4 sm:px-6 md:px-20 scroll-mt-24 bg-robot-arm bg-lock-left"
+    >
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 text-[#FFFDD0]">
+        Meet the Team
+      </h2>
 
-    {grouped.map((row, rowIndex) => (
-      <div
-        key={rowIndex}
-        className="flex justify-center gap-x-12 mb-1 flex-wrap"
-      >
-        {row.map((member, idx) => (
-          <TeamMember key={idx} {...member} />
-        ))}
-      </div>
-    ))}
-  </section>
-);
+      {grouped.map((row, rowIndex) => (
+        <div
+          key={rowIndex}
+          className="flex justify-center items-center gap-6 sm:gap-8 md:gap-12 mb-10 flex-wrap"
+        >
+          {row.map((member, idx) => (
+            <TeamMember key={idx} {...member} />
+          ))}
+        </div>
+      ))}
+    </section>
+  );
 }

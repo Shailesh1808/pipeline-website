@@ -15,11 +15,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24 px-6 scroll-mt-24 bg-robot-arm bg-lock-left"
+      className="py-12 md:py-24 px-6 scroll-mt-24 bg-robot-arm bg-lock-left"
     >
       {/* Section Heading */}
-      <div className="max-w-3xl mx-auto text-center mb-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#A4BBDD] leading-snug">
+      <div className="max-w-3xl mx-auto text-center mb-12 md:mb-20">
+        <h2 className="text-2xl md:text-4xl font-bold text-[#A4BBDD] leading-snug">
           Built for Highly Regulated Industries. <br />
           Ready for Fast, Accurate Compliance. <br />
           Streamlined Security for Manufacturers.
@@ -27,7 +27,7 @@ export default function About() {
       </div>
 
       {/* Feature Blocks */}
-      <div className="max-w-5xl mx-auto px-6 md:px-12">
+      <div className="max-w-5xl mx-auto px-4 md:px-12">
         <FeatureBlock
           title="Automated threat modeling."
           description="Upload documentation or system details to generate interactive, component-level threat models instantly."
@@ -51,9 +51,9 @@ export default function About() {
       </div>
 
       {/* Icon Grid */}
-      <div className="max-w-5xl mx-auto mt-30">
+      <div className="max-w-5xl mx-auto mt-16 md:mt-20">
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-4 gap-x-12 gap-y-16 text-center"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-12 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -61,50 +61,49 @@ export default function About() {
         >
           <div>
             <HiShieldCheck className="w-10 h-10 mx-auto mb-2 text-[#A4BBDD]" />
-            <p className="text-[#FFFDD0] text-sm font-semibold uppercase tracking-wide">
+            <p className="text-[#FFFDD0] text-xs md:text-sm font-semibold uppercase tracking-wide">
               AI Security
             </p>
           </div>
           <div>
             <HiClipboardList className="w-10 h-10 mx-auto mb-2 text-[#A4BBDD]" />
-            <p className="text-[#FFFDD0] text-sm font-semibold uppercase tracking-wide">
+            <p className="text-[#FFFDD0] text-xs md:text-sm font-semibold uppercase tracking-wide">
               Pentest Planning
             </p>
           </div>
           <div>
             <HiMap className="w-10 h-10 mx-auto mb-2 text-[#A4BBDD]" />
-            <p className="text-[#FFFDD0] text-sm font-semibold uppercase tracking-wide">
+            <p className="text-[#FFFDD0] text-xs md:text-sm font-semibold uppercase tracking-wide">
               Compliance Map
             </p>
           </div>
           <div>
             <HiLockClosed className="w-10 h-10 mx-auto mb-2 text-[#A4BBDD]" />
-            <p className="text-[#FFFDD0] text-sm font-semibold uppercase tracking-wide">
+            <p className="text-[#FFFDD0] text-xs md:text-sm font-semibold uppercase tracking-wide">
               Secure Data
             </p>
           </div>
-
           <div>
             <HiUsers className="w-10 h-10 mx-auto mb-2 text-[#A4BBDD]" />
-            <p className="text-[#FFFDD0] text-sm font-semibold uppercase tracking-wide">
+            <p className="text-[#FFFDD0] text-xs md:text-sm font-semibold uppercase tracking-wide">
               Team Friendly
             </p>
           </div>
           <div>
             <HiClock className="w-10 h-10 mx-auto mb-2 text-[#A4BBDD]" />
-            <p className="text-[#FFFDD0] text-sm font-semibold uppercase tracking-wide">
+            <p className="text-[#FFFDD0] text-xs md:text-sm font-semibold uppercase tracking-wide">
               Timeline View
             </p>
           </div>
           <div>
             <HiCubeTransparent className="w-10 h-10 mx-auto mb-2 text-[#A4BBDD]" />
-            <p className="text-[#FFFDD0] text-sm font-semibold uppercase tracking-wide">
+            <p className="text-[#FFFDD0] text-xs md:text-sm font-semibold uppercase tracking-wide">
               Interactive Models
             </p>
           </div>
           <div>
             <HiLightningBolt className="w-10 h-10 mx-auto mb-2 text-[#A4BBDD]" />
-            <p className="text-[#FFFDD0] text-sm font-semibold uppercase tracking-wide">
+            <p className="text-[#FFFDD0] text-xs md:text-sm font-semibold uppercase tracking-wide">
               Fast Setup
             </p>
           </div>

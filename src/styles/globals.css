@@ -44,13 +44,15 @@ body::after {
 
 /* Lock sketch on the left */
 body::before {
-  background: url('/images/bg-lock.png') no-repeat -10px 65% / 650px auto;
+  background: url('/images/bg-lock.png') no-repeat left center;
+  background-size: 40vw auto; /* scale with viewport */
   opacity: 0.2;
 }
 
 /* Robot arm on the right */
 body::after {
-  background: url('/images/robot-arm.png') no-repeat calc(100% + 200px) 30% / 600px auto;
+  background: url('/images/robot-arm.png') no-repeat right center;
+  background-size: 35vw auto; /* scale with viewport */
   opacity: 0.55;
 }
 
@@ -79,4 +81,28 @@ body::after {
   opacity: 0.15;
   pointer-events: none;
   z-index: -1;
+}
+
+/* ========= Tablet adjustments ========= */
+@media (max-width: 1024px) {
+  body::before {
+    background-size: 50vw auto;
+    background-position: -40px center;
+  }
+  body::after {
+    background-size: 45vw auto;
+    background-position: right 40px center;
+  }
+}
+
+/* ========= Mobile adjustments ========= */
+@media (max-width: 768px) {
+  body::before {
+    background-size: 60vw auto;
+    background-position: -30px center;
+  }
+  body::after {
+    background-size: 55vw auto;
+    background-position: right 20px center;
+  }
 }
