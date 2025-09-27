@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000026;   /* main site background */
+  --foreground: #ededed;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background); /* solid base color lives here */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========= Animations ========= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* ========= Body & stacking ========= */
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  position: relative; /* stacking context */
+  z-index: 0;
+}
+
+/* Background images as overlays */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;  /* sit above background but below content */
+}
+
+/* Lock sketch on the left */
+body::before {
+  background: url('/images/bg-lock.png') no-repeat -10px 65% / 650px auto;
+  opacity: 0.2;
+}
+
+/* Robot arm on the right */
+body::after {
+  background: url('/images/robot-arm.png') no-repeat calc(100% + 200px) 30% / 600px auto;
+  opacity: 0.55;
+}
+
+/* All content sits above */
+#__next, main, #root {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========= Optional: Lines background ========= */
+.bg-lines {
+  background-image: url('/images/bg-lines.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+}
+
+.bg-lines::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: url('/images/bg-lines.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
 }
