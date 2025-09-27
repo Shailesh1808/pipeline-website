@@ -5,7 +5,12 @@
   --foreground: #ededed;
 }
 
-html {
+/* ========= Reset & Global Layout ========= */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;        /* avoid sideways scroll on mobile */
   scroll-behavior: smooth;
   background-color: var(--background); /* solid base color lives here */
 }
@@ -65,6 +70,7 @@ body::after {
 #__next, main, #root {
   position: relative;
   z-index: 1;
+  width: 100%;   /* ensure full width */
 }
 
 /* ========= Optional: Lines background ========= */

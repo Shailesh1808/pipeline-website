@@ -22,7 +22,7 @@ export default function Navbar() {
           : "bg-[#000026]"
       }`}
     >
-      {/* Wrapper with consistent centering */}
+      {/* Wrapper ensures central alignment */}
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
         
         {/* Logo (click to go home) */}
@@ -61,8 +61,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center justify-end flex-1">
+        {/* Mobile Menu Button (always flush right) */}
+        <div className="md:hidden flex justify-end ml-auto">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-[#FFFDD0] focus:outline-none"
