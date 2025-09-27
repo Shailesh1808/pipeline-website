@@ -22,7 +22,9 @@ export default function Navbar() {
           : "bg-[#000026]"
       }`}
     >
-      <div className="w-full max-w-7xl mx-auto flex items-center justify-between h-20 px-4 sm:px-8">
+      {/* Wrapper with consistent centering */}
+      <div className="w-full max-w-7xl mx-auto flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
+        
         {/* Logo (click to go home) */}
         <Link href="/" replace>
           <span className="text-white font-bold text-[22px] sm:text-[25px] tracking-[-0.01em] font-inter cursor-pointer">
@@ -31,36 +33,36 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8 lg:space-x-12">
+        <div className="hidden md:flex items-center space-x-8 lg:space-x-12">
           <Link href="#about" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] cursor-pointer">
               About
             </span>
           </Link>
           <Link href="#industries" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] cursor-pointer">
               Industries
             </span>
           </Link>
           <Link href="#insights" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] cursor-pointer">
               Insights
             </span>
           </Link>
           <Link href="#team" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] cursor-pointer">
               Team
             </span>
           </Link>
           <Link href="#contact" scroll={true}>
-            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="text-[#FFFDD0] font-medium text-[15px] sm:text-[16px] cursor-pointer">
               Contact Us
             </span>
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex justify-end flex-1">
+        <div className="md:hidden flex items-center justify-end flex-1">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-[#FFFDD0] focus:outline-none"
@@ -97,27 +99,27 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-[#000026] px-6 pb-6 space-y-4 text-center">
           <Link href="#about" scroll={true}>
-            <span className="block text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="block text-[#FFFDD0] font-medium text-[16px] cursor-pointer">
               About
             </span>
           </Link>
           <Link href="#industries" scroll={true}>
-            <span className="block text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="block text-[#FFFDD0] font-medium text-[16px] cursor-pointer">
               Industries
             </span>
           </Link>
           <Link href="#insights" scroll={true}>
-            <span className="block text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="block text-[#FFFDD0] font-medium text-[16px] cursor-pointer">
               Insights
             </span>
           </Link>
           <Link href="#team" scroll={true}>
-            <span className="block text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="block text-[#FFFDD0] font-medium text-[16px] cursor-pointer">
               Team
             </span>
           </Link>
           <Link href="#contact" scroll={true}>
-            <span className="block text-[#FFFDD0] font-medium text-[16px] tracking-[-0.01em] cursor-pointer">
+            <span className="block text-[#FFFDD0] font-medium text-[16px] cursor-pointer">
               Contact Us
             </span>
           </Link>
